@@ -48,7 +48,7 @@ const normalizer = {
 const validator = {
     rules: {},
     messages: {
-        valueMissing: '* שדה חובה'
+        valueMissing: '* This field is required.'
     },
     add: function(name, fn, message){
         this.rules[name] = fn;
