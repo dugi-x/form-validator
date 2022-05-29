@@ -1,0 +1,19 @@
+@layer components {
+	form.was-validated :invalid,
+    form.was-validated .is-invalid{
+        @apply border border-red-500 ;
+    }
+
+    form.was-validated :invalid:focus,
+    form.was-validated .is-invalid:focus{
+        box-shadow: 0 0 0 .25rem rgba(220,53,69,.25);
+    }
+    
+    .invalid-feedback {
+        @apply hidden;
+    }
+    
+    .is-invalid~.invalid-feedback,.was-validated :invalid~.invalid-feedback,.invalid-feedback.show {
+        @apply block text-red-500;
+    }
+}
